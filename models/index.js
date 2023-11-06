@@ -2,12 +2,21 @@ const Album = require('./Album');
 const User = require('./User');
 const Ratings = require('./Ratings');
 
-// User.hasMany(Ratings, {
-//   foreignKey: ''
-// })
-
-Ratings.belongsTo(User, {
-  foreignKey: 'id' // might need to rename this
+User.hasMany(Ratings, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
-module.exports = { Album, User };
+Ratings.belongsTo(User, {
+  foreignKey: 'id',
+});
+
+Album.hasMany(Ratings, {
+  foreignKey: 'album_id',
+});
+
+Ratings.belongsTo(Album, {
+  foreignKey: 'album_id',
+});
+
+module.exports = { Album, User, Ratings };
