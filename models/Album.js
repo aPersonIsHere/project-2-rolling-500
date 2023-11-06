@@ -11,27 +11,27 @@ Album.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    rank: {
+    Number: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    year: {
+    Year: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    album_title: {
+    Album: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    artist: {
+    Artist: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    genre: {
+    Genre: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    subgenre: {
+    Subgenre: {
       type: DataTypes.STRING,
       allowNull: false,
     }
