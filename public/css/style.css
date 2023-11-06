@@ -8,22 +8,32 @@ body {
   
   header {
     font-family: 'Royal Acidbath', sans-serif;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     padding: 1%;
-    background-color: blue;
+    background-color: white;
     color: red;
-    
   }
   
-  /* Change the heading size to 200%, give it a margin all around, and assign font family to serif */
-  h1 {
-    margin: 2%;
+  .navbar-brand {
+    color: red;
     font-size: 200%;
-    font-family: 'Royal Acidbath', sans-serif;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
+
+  .navLinks {
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav a {
+    color: red;
+    font-size: 150%;
+  }
+
+  /* Change the heading size to 200%, give it a margin all around, and assign font family to serif */
+
   
   /* Change header size to 180%, give it a 3% margin on top and bottom, and assign font family to serif */
   h2 {
@@ -36,18 +46,6 @@ body {
   h3 {
     font-size: 150%;
     font-family: serif;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-    min-width: 300px;
-  }
-  
-  nav a {
-    color: black;
-    font-weighC6aet: bold;
-    text-decoration: none;
   }
   
   main {
