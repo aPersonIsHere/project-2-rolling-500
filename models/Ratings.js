@@ -8,10 +8,11 @@ Ratings.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
       autoIncrement: true,
     },
     album_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: "album",
