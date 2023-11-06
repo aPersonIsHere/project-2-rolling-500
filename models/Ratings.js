@@ -11,6 +11,14 @@ Ratings.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "user",
+        key: "id"
+      },
+    },
     album_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -22,7 +30,11 @@ Ratings.init(
     rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    }
+      validate: {
+        isNumeric: true,
+        len: [0,5],
+      },
+    },
   },
   {
   sequelize,
