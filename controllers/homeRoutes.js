@@ -25,7 +25,7 @@ router.get('/albums', async (req, res) => {
         const albums = sortedAlbums.map((album) => album.get({ plain: true }));
     
         // Pass serialized data and session flag into template
-        res.render('homepage-login-signup', { 
+        res.render('album', { 
           albums, 
           logged_in: req.session.logged_in 
         });
@@ -127,7 +127,7 @@ router.get('/ratings/', async (req, res) => {
       // Serialize data so the template can read it
       const ratings = ratingsData.map((rating) => rating.get({ plain: true }));
 
-      res.render('rating', { //check handlebars name
+      res.render('ratings', { //check handlebars name
         ratings,
         logged_in: req.session.logged_in
       });
