@@ -34,7 +34,15 @@ Album.init(
     Subgenre: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
+    rating_group: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'ratings',
+        key: 'rating'
+      },
+    },
   },
   {
     sequelize,
