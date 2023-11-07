@@ -5,6 +5,19 @@ const withAuth = require('../utils/auth');
 // ROUTE: /
 
 //----allows you to view all albums----//
+router.get('/', async (req, res) => {
+
+  try {
+      res.render('homepage-login-signup', { 
+        logged_in: req.session.logged_in 
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
+//----allows you to view all albums----//
 router.get('/albums', async (req, res) => {
 
     try {
@@ -23,7 +36,9 @@ router.get('/albums', async (req, res) => {
     
         // Serialize data so the template can read it
         const albums = sortedAlbums.map((album) => album.get({ plain: true }));
-    
+        
+        //res.status(200).json(albums);
+
         // Pass serialized data and session flag into template
         res.render('album', { 
           albums, 
@@ -59,6 +74,8 @@ router.get('/albums/:id', async (req, res) => {
         });
 
         const albums = albumData.get({ plain: true });
+
+        //res.status(200).json(albums);
 
         res.render('album', {
           ...albums,
@@ -109,26 +126,31 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/ratings/', async (req, res) => {
 
   try {
-      const ratingsData = await Ratings.findByPk(req.params.rating_group, { //check ratings group
-        include: [
-          {
-            model: Album,
-            attributes: [
-              'Year',
-              'Album',
-              'Artist',
-              'Genre',
-              'Subgenre',
-              ],
-          },
-        ],
+      const ratingsData = await Album.findAll({ 
+        attributes: ['rating_group', 'Album'],
+        group: ['rating_group', 'Album'],
       });
 
-      // Serialize data so the template can read it
-      const ratings = ratingsData.map((rating) => rating.get({ plain: true }));
+      const ratingsMap = {};
+    
+      // Group albums by rating_group
+      ratingsData.forEach((rating) => {
+        const { rating_group, Album } = rating.get({ plain: true });
+  
+        // If the rating_group is not a key in the ratingsMap, create an array to store album names
+        if (!ratingsMap[rating_group]) {
+          ratingsMap[rating_group] = [];
+        }
+  
+        // Push the album name to the corresponding rating_group key
+        ratingsMap[rating_group].push(Album);
+      });
+
+      // res.status(200).json(ratingsMap);
+      // console.log(ratingsMap);
 
       res.render('ratings', { //check handlebars name
-        ratings,
+        ratingsMap,
         logged_in: req.session.logged_in
       });
     } catch (err) {
