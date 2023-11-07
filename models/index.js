@@ -19,4 +19,5 @@ Ratings.belongsTo(Album, {
   foreignKey: 'album_id',
 });
 
+
 module.exports = { Album, User, Ratings };
