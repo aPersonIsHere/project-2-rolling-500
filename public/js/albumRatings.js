@@ -1,0 +1,1 @@
+// Functionality for user rating

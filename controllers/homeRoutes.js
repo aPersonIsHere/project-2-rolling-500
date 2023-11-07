@@ -25,7 +25,7 @@ router.get('/albums', async (req, res) => {
         const albums = sortedAlbums.map((album) => album.get({ plain: true }));
     
         // Pass serialized data and session flag into template
-        res.render('homepage', { 
+        res.render('homepage-login-signup', { 
           albums, 
           logged_in: req.session.logged_in 
         });
@@ -136,15 +136,15 @@ router.get('/ratings/', async (req, res) => {
     }
 });
 
-router.get('/login', (req, res) => {
+// router.get('/login', (req, res) => {
 
-    // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
-      res.redirect('/');
-      return;
-    }
+//     // If the user is already logged in, redirect the request to another route
+//     if (req.session.logged_in) {
+//       res.redirect('/');
+//       return;
+//     }
   
-    res.render('login');
-  });
+//     res.render('login');
+//   });
   
   module.exports = router;

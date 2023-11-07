@@ -30,6 +30,7 @@ Ratings.init(
     rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
       validate: {
         isNumeric: true,
         len: [0,5],
