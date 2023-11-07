@@ -8,6 +8,29 @@ const dateFilter = (startYear, endYear) => {
   return data;
 };
 
+const albumsbyArtist = artistCount(albumData);
+
+console.log(albumsbyArtist);
+console.log(albumsbyArtist['Bob Dylan']);
+
+function artistCount(albumData) {
+  const artistCount = {};
+
+  albumData.forEach(album => {
+    const artist = album.Artist;
+
+    if (artist) {
+      if (artistCount[artist]) {
+        artistCount[artist]++;
+      } else {
+        artistCount[artist] = 1;
+      }
+    }
+  });
+
+  return artistCount;
+};
+
 new Chart(ctx, {
   type: 'bar',
   data: {
@@ -18,12 +41,7 @@ new Chart(ctx, {
       borderWidth: 2,
       backgroundColor: ['Blue', 'Yellow', 'Orange', 'Green', 'Purple', 'Pink', 'Red']
     },
-    {
-      label: 'Albums by Decade',
-      data: [dateFilter(1950, 1960), dateFilter(1960, 1970), dateFilter(1970, 1980), dateFilter(1980, 1990), dateFilter(1990, 2000), dateFilter(2000, 2010), dateFilter(2010, 2020)],
-      borderWidth: 2,
-      backgroundColor: ['Blue', 'Yellow', 'Orange', 'Green', 'Purple', 'Pink', 'Red']
-    }]
+  ]
   },
   options: {
     scales: {
