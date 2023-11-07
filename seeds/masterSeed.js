@@ -105,6 +105,7 @@ const albumData = [
     "Genre": "Rock",
     "Subgenre": "Garage Rock, Art Rock, Experimental"
   },
+  //I will do Number 1-13 and get the cover art per album and put it in public/images . Number formatting will be #.png (# from Number)
   {
     "Number": 14,
     "Year": 1969,
