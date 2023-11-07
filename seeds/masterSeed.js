@@ -1,4 +1,4 @@
-const { Album } = require('../models');
+// const { Album } = require('../models');
 
 const albumData = [
   {
@@ -4003,6 +4003,6 @@ const albumData = [
   }
 ]
 
-const seedAlbum = () => Album.bulkCreate(albumData);
+// const seedAlbum = () => Album.bulkCreate(albumData);
 
-module.exports = seedAlbum;
+// module.exports = { seedAlbum, albumData }
