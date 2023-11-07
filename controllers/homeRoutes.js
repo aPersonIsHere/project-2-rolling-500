@@ -30,7 +30,7 @@ router.get('/albums', async (req, res) => {
           logged_in: req.session.logged_in 
         });
       } catch (err) {
-        console.log(egitrr);
+        console.log(err);
         res.status(500).json(err);
       }
 });
@@ -109,7 +109,7 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/ratings/', async (req, res) => {
 
   try {
-      const ratingsData = await Ratings.findByPk(req.params.rating_group, { //check ratings group
+      const ratingsData = await Ratings.findByPk(req.params.ratings_group, { //check ratings group
         include: [
           {
             model: Album,
@@ -136,15 +136,15 @@ router.get('/ratings/', async (req, res) => {
     }
 });
 
-// router.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
 
-//     // If the user is already logged in, redirect the request to another route
-//     if (req.session.logged_in) {
-//       res.redirect('/');
-//       return;
-//     }
+    // If the user is already logged in, redirect the request to another route
+    if (req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
   
-//     res.render('login');
-//   });
+    res.render('login');
+  });
   
   module.exports = router;
