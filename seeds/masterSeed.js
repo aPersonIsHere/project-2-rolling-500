@@ -206,4 +206,4 @@ const albumData = [
 
 const seedAlbum = () => Album.bulkCreate(albumData);
 
-module.exports = { seedAlbum, albumData }
+module.exports = seedAlbum;
