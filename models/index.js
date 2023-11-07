@@ -8,7 +8,7 @@ User.hasMany(Ratings, {
 });
 
 Ratings.belongsTo(User, {
-  foreignKey: 'id',
+  foreignKey: 'user_id',
 });
 
 Album.hasMany(Ratings, {
