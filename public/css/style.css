@@ -94,6 +94,12 @@ body {
     background-color: #13293d;
     color: #fff;
   }
+
+  #myChart {
+    padding: 10px;
+    border: solid 4px darkblue;
+    box-shadow: 4px 4px gray;
+  }
   
   @media screen and (max-width: 768px) {
     header, main {
