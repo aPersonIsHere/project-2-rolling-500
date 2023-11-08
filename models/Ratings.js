@@ -29,7 +29,7 @@ Ratings.init(
     },
     rating: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       validate: {
         isNumeric: true,
         len: [0,5],

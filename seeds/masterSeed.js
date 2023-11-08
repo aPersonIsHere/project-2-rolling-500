@@ -7,7 +7,8 @@ const albumData = [
     "Album": "Sgt. Pepper's Lonely Hearts Club Band",
     "Artist": "The Beatles",
     "Genre": "Rock",
-    "Subgenre": "Rock & Roll, Psychedelic Rock"
+    "Subgenre": "Rock & Roll, Psychedelic Rock",
+    "album_art": "/images/1.png"
   },
   {
     "Number": 2,
@@ -15,7 +16,8 @@ const albumData = [
     "Album": "Pet Sounds",
     "Artist": "The Beach Boys",
     "Genre": "Rock",
-    "Subgenre": "Pop Rock, Psychedelic Rock"
+    "Subgenre": "Pop Rock, Psychedelic Rock",
+    "album_art": "/images/2.png"
   },
   {
     "Number": 3,
@@ -23,7 +25,8 @@ const albumData = [
     "Album": "Revolver",
     "Artist": "The Beatles",
     "Genre": "Rock",
-    "Subgenre": "Psychedelic Rock, Pop Rock"
+    "Subgenre": "Psychedelic Rock, Pop Rock",
+    "album_art": "/images/3.png"
   },
   {
     "Number": 4,
@@ -31,7 +34,8 @@ const albumData = [
     "Album": "Highway 61 Revisited",
     "Artist": "Bob Dylan",
     "Genre": "Rock",
-    "Subgenre": "Folk Rock, Blues Rock"
+    "Subgenre": "Folk Rock, Blues Rock",
+    "album_art": "/images/4.png"
   },
   {
     "Number": 5,
@@ -39,7 +43,8 @@ const albumData = [
     "Album": "Rubber Soul",
     "Artist": "The Beatles",
     "Genre": "Rock, Pop",
-    "Subgenre": "Pop Rock"
+    "Subgenre": "Pop Rock",
+    "album_art": "/images/5.png"
   },
   {
     "Number": 6,
@@ -47,7 +52,8 @@ const albumData = [
     "Album": "What's Going On",
     "Artist": "Marvin Gaye",
     "Genre": "Funk / Soul",
-    "Subgenre": "Soul"
+    "Subgenre": "Soul",
+    "album_art": "/images/6.png"
   },
   {
     "Number": 7,
@@ -55,7 +61,8 @@ const albumData = [
     "Album": "Exile on Main St.",
     "Artist": "The Rolling Stones",
     "Genre": "Rock",
-    "Subgenre": "Blues Rock, Rock & Roll, Classic Rock"
+    "Subgenre": "Blues Rock, Rock & Roll, Classic Rock",
+    "album_art": "/images/7.png"
   },
   {
     "Number": 8,
@@ -63,7 +70,8 @@ const albumData = [
     "Album": "London Calling",
     "Artist": "The Clash",
     "Genre": "Rock",
-    "Subgenre": "Punk, New Wave"
+    "Subgenre": "Punk, New Wave",
+    "album_art": "/images/8.png"
   },
   {
     "Number": 9,
@@ -71,7 +79,8 @@ const albumData = [
     "Album": "Blonde on Blonde",
     "Artist": "Bob Dylan",
     "Genre": "Rock, Blues",
-    "Subgenre": "Folk Rock, Rhythm & Blues"
+    "Subgenre": "Folk Rock, Rhythm & Blues",
+    "album_art": "/images/9.png"
   },
   {
     "Number": 10,
@@ -79,7 +88,8 @@ const albumData = [
     "Album": "The Beatles (\"The White Album\")",
     "Artist": "The Beatles",
     "Genre": "Rock",
-    "Subgenre": "Rock & Roll, Pop Rock, Psychedelic Rock, Experimental"
+    "Subgenre": "Rock & Roll, Pop Rock, Psychedelic Rock, Experimental",
+    "album_art": "/images/10.png"
   },
   {
     "Number": 11,
@@ -87,7 +97,8 @@ const albumData = [
     "Album": "The Sun Sessions",
     "Artist": "Elvis Presley",
     "Genre": "Rock",
-    "Subgenre": "Rock & Roll"
+    "Subgenre": "Rock & Roll",
+    "album_art": "/images/11.png"
   },
   {
     "Number": 12,
@@ -95,7 +106,8 @@ const albumData = [
     "Album": "Kind of Blue",
     "Artist": "Miles Davis",
     "Genre": "Jazz",
-    "Subgenre": "Modal"
+    "Subgenre": "Modal",
+    "album_art": "/images/12.png"
   },
   {
     "Number": 13,
@@ -103,16 +115,17 @@ const albumData = [
     "Album": "The Velvet Underground & Nico",
     "Artist": "The Velvet Underground",
     "Genre": "Rock",
-    "Subgenre": "Garage Rock, Art Rock, Experimental"
+    "Subgenre": "Garage Rock, Art Rock, Experimental",
+    "album_art": "/images/13.png"
   },
-  //I will do Number 1-13 and get the cover art per album and put it in public/images . Number formatting will be #.png (# from Number)
   {
     "Number": 14,
     "Year": 1969,
     "Album": "Abbey Road",
     "Artist": "The Beatles",
     "Genre": "Rock",
-    "Subgenre": "Psychedelic Rock, Classic Rock, Pop Rock"
+    "Subgenre": "Psychedelic Rock, Classic Rock, Pop Rock",
+    "album_art": "/images/14.png"
   },
   {
     "Number": 15,
@@ -120,7 +133,8 @@ const albumData = [
     "Album": "Are You Experienced",
     "Artist": "The Jimi Hendrix Experience",
     "Genre": "Rock, Blues",
-    "Subgenre": "Blues Rock, Psychedelic Rock"
+    "Subgenre": "Blues Rock, Psychedelic Rock",
+    "album_art": "/images/15.png"
   },
   {
     "Number": 16,
@@ -128,7 +142,8 @@ const albumData = [
     "Album": "Blood on the Tracks",
     "Artist": "Bob Dylan",
     "Genre": "Rock",
-    "Subgenre": "Folk Rock, Acoustic, Ballad"
+    "Subgenre": "Folk Rock, Acoustic, Ballad",
+    "album_art": "/images/16.png"
   },
   {
     "Number": 17,
@@ -136,7 +151,8 @@ const albumData = [
     "Album": "Nevermind",
     "Artist": "Nirvana",
     "Genre": "Rock",
-    "Subgenre": "Alternative Rock, Grunge"
+    "Subgenre": "Alternative Rock, Grunge",
+    "album_art": "/images/17.png"
   },
   {
     "Number": 18,
@@ -144,7 +160,8 @@ const albumData = [
     "Album": "Born to Run",
     "Artist": "Bruce Springsteen",
     "Genre": "Rock",
-    "Subgenre": "Pop Rock"
+    "Subgenre": "Pop Rock",
+    "album_art": "/images/18.png"
   },
   {
     "Number": 19,
@@ -152,7 +169,8 @@ const albumData = [
     "Album": "Astral Weeks",
     "Artist": "Van Morrison",
     "Genre": "Jazz, Rock, Blues, Folk, World, & Country",
-    "Subgenre": "Acoustic, Classic Rock, Free Improvisation"
+    "Subgenre": "Acoustic, Classic Rock, Free Improvisation",
+    "album_art": "/images/19.png"
   },
   {
     "Number": 20,
@@ -160,7 +178,8 @@ const albumData = [
     "Album": "Thriller",
     "Artist": "Michael Jackson",
     "Genre": "Funk / Soul, Pop",
-    "Subgenre": "Disco"
+    "Subgenre": "Disco",
+    "album_art": "/images/20.png"
   },
   {
     "Number": 21,
@@ -168,7 +187,8 @@ const albumData = [
     "Album": "The Great Twenty_Eight",
     "Artist": "Chuck Berry",
     "Genre": "Rock",
-    "Subgenre": "Rock & Roll"
+    "Subgenre": "Rock & Roll",
+    "album_art": "/images/21.png"
   },
   {
     "Number": 22,
@@ -176,7 +196,8 @@ const albumData = [
     "Album": "The Complete Recordings",
     "Artist": "Robert Johnson",
     "Genre": "Blues",
-    "Subgenre": "Delta Blues"
+    "Subgenre": "Delta Blues",
+    "album_art": "/images/22.png"
   },
   {
     "Number": 23,
@@ -184,7 +205,8 @@ const albumData = [
     "Album": "John Lennon/Plastic Ono Band",
     "Artist": "John Lennon / Plastic Ono Band",
     "Genre": "Rock",
-    "Subgenre": "Pop Rock"
+    "Subgenre": "Pop Rock",
+    "album_art": "/images/23.png"
   },
   {
     "Number": 24,
@@ -192,7 +214,8 @@ const albumData = [
     "Album": "Innervisions",
     "Artist": "Stevie Wonder",
     "Genre": "Funk / Soul",
-    "Subgenre": "Soul"
+    "Subgenre": "Soul",
+    "album_art": "/images/24.png"
   },
   {
     "Number": 25,
@@ -200,7 +223,8 @@ const albumData = [
     "Album": "Live at the Apollo, 1962",
     "Artist": "James Brown",
     "Genre": "Funk / Soul",
-    "Subgenre": "Rhythm & Blues, Soul"
+    "Subgenre": "Rhythm & Blues, Soul",
+    "album_art": "/images/25.png"
   },
 ]
 

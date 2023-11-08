@@ -10,6 +10,21 @@ const userData = [
     username: "support",
     email: "support@rolling500.com",
     password: "password"
+  },
+  {
+    username: "kev",
+    email: "kevin@me.com",
+    password: "password"
+  },
+  {
+    username: "mike",
+    email: "mike@me.com",
+    password: "password"
+  },
+  {
+    username: "ozi",
+    email: "ozi@me.com",
+    password: "password"
   }
 ]
 

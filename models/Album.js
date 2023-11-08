@@ -1,7 +1,29 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection')
+const sequelize = require('../config/connection');
+const Ratings = require('./Ratings');
 
-class Album extends Model {}
+class Album extends Model {
+
+  //----testing section----//
+  static async calculateAverageRating(albumId) {
+    const ratings = await Ratings.findAll({
+      where: {
+        album_id: albumId,
+      },
+    });
+
+    if (ratings.length > 0) {
+      const totalRating = ratings.reduce((sum, rating) => sum + rating.rating, 0);
+      const averageRating = totalRating / ratings.length;
+      const truncatedAverageRating = Math.trunc(averageRating); // Truncate the decimal part
+
+      await Album.update({ rating_group: truncatedAverageRating }, { where: { id: albumId } });
+    } else {
+      await Album.update({ rating_group: null }, { where: { id: albumId } });
+    }
+  }
+    //----testing section----//
+}
 
 Album.init(
   {
