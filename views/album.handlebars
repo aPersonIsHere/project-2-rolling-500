@@ -2,8 +2,19 @@
   <div>
     <canvas id="myChart" height="20px" width="100px"></canvas>
   </div>
-
-
+  {{#each albums as |album|}}
+ <div class="card" style="width: 18rem;">
+    <img src="{{album.album_art}}" class="card-img-top album-art" alt="Album Art">
+    <div class="card-body">
+      <h4 class="card-title album">{{album.Album}}</h4>
+      <h5 class="card-title artist">{{album.Artist}}Artist</h5>
+      <h6 class="card-title year">{{album.Year}}</h6>
+      <p class="card-title rank">{{album.Number}}</p>
+      <p class="card-title genre">{{album.Genre}}</p>
+      <p class="card-title genre">{{album.rating_group}}</p>
+    </div>
+  </div>
+{{/each}}
   
   
 
