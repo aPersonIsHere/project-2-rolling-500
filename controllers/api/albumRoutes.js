@@ -19,7 +19,6 @@ const { Album } = require('../../models');
  });
 
  module.exports = router;
-
  
  router.put('/', async (req, res) => {
      try {
@@ -31,7 +30,6 @@ const { Album } = require('../../models');
 
         req.session.save(() => {
              req.session.logged_in = true;
-
              res.status(200).json(dbUserData);
          });
      } catch (err) {
