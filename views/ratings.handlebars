@@ -1,0 +1,19 @@
+<section>
+    <img src=""
+<div>
+    <h2 class="text-center bg-light">Unfortunately we do not offer participation awards here... so here is your ranking!</h2>
+</div>
+
+<div>
+    <ul>
+    {{#each ratingsMap}}
+        <h2>Rating Group {{@key}}</h2>
+        <ul>
+        {{#each this}}
+            <li>{{this}}</li>
+        {{/each}}
+        </ul>
+    {{/each}}
+    </ul>
+</div>
+</section>
