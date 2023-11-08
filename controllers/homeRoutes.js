@@ -149,7 +149,7 @@ router.get('/ratings/', async (req, res) => {
       // res.status(200).json(ratingsMap);
       // console.log(ratingsMap);
 
-      res.render('ratings', { //check handlebars name
+      res.render('ratings', {
         ratingsMap,
         logged_in: req.session.logged_in
       });
@@ -157,6 +157,33 @@ router.get('/ratings/', async (req, res) => {
       res.status(500).json(err);
     }
 });
+
+//----allows you to view a single album with comments----//
+// router.get('/ratings/', async (req, res) => {
+
+//   try {
+//     // Get all albums and JOIN with ratings data***
+//     const albumData = await Album.findAll({
+//     });
+
+//     // Sort albums by number in descending order
+//     const sortedAlbums = albumData.sort((a, b) => a.rating_group - b.rating_group);
+
+//     // Serialize data so the template can read it
+//     const albums = sortedAlbums.map((album) => album.get({ plain: true }));
+    
+//     //res.status(200).json(albums);
+
+//     // Pass serialized data and session flag into template
+//     res.render('ratings', { 
+//       ...albums, 
+//       logged_in: req.session.logged_in 
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 // router.get('/login', (req, res) => {
 
