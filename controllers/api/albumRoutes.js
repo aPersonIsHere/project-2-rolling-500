@@ -20,7 +20,7 @@
 
 // module.exports = router;
 
-// /*
+
 // router.put('/', async (req, res) => {
 //     try {
 //         const dbVoteData = await User.create({
@@ -39,4 +39,3 @@
 //         res.status(500).json(err);
 //     }
 // });
-// */
