@@ -32,6 +32,14 @@ body {
     font-size: 150%;
   }
 
+  .card {
+    width: 100%;
+  }
+
+  .card img {
+    width: 20rem;
+  }
+
   /* Change the heading size to 200%, give it a margin all around, and assign font family to serif */
 
   
@@ -48,12 +56,12 @@ body {
     font-family: serif;
   }
   
-  main {
+  /* main {
     display: flex;
     flex: 1 1 0;
     max-width: 1200px;
     margin: 2% auto;
-  }
+  } */
   
   section {
     flex: 1 1 0;
