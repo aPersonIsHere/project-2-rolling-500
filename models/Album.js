@@ -39,6 +39,10 @@ Album.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    album_art: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   },
 
   {
