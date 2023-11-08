@@ -5,9 +5,9 @@ const seedRatings = require('./ratingsSeed');
 
 const seedAll = async () => {
   await sequelize.sync({ force: false });
-
-  await seedUser();
+  
   await seedAlbum();
+  await seedUser();
   await seedRatings();
 
   process.exit(0);
