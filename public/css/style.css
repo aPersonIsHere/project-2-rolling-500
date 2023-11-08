@@ -123,4 +123,11 @@ body {
       text-align: center;
     }
   }
+
+  .btn {
+    width: 50px;
+    background-color: darkblue;
+    box-shadow: 4px 4px gray;
+    color: white;
+  }
   
