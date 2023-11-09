@@ -57,4 +57,18 @@ There is no software or extra code in this program that allows for testing purpo
 Feel free to reach out through email by highlighting my email address and copy-and-paste it to your recipient. 
 Feel free to ask further questions, provide suggestions, or to send a thank you note!
 
-        
+
+```
+WHEN I launch the site
+THEN I am presented with a homepage that gives me the option to sign up or sign in.
+WHEN I sign up or sign in
+THEN I am taken to a page that displays the top 25 albums from the dataset with rating buttons included
+WHEN I click a button (1 - 5) 
+THEN my rating is added to the database
+AND the average rating for the album is affected
+WHEN I click the ratings tab
+THEN I see a list dedicated to the albums, organized by their ranking
+WHEN I click logout
+THEN I am returned to the main page
+
+```
