@@ -28,7 +28,7 @@ document.querySelector(".albums").addEventListener("click", async function(event
     if (response.ok) {
       document.location.reload();
     } else {
-      alert('Error adding rating.')
+      alert('Error adding rating. You must have an account to cast a rating.')
     }
   }
 });

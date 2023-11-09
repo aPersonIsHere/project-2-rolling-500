@@ -2,10 +2,30 @@
   <div>
     <canvas id="myChart" height="200px" width="100px"></canvas>
   </div>
+  {{#unless albums}} //This is if for some reason, the connection to the album database is severed 
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title album">Album: 500</h4>
+      <h5 class="card-title artist">Artist: 500</h5>
+      <h6 class="card-title year">Year: 500</h6>
+      <p class="card-title rank">Rank: 500</p>
+      <p class="card-title genre">Genre: 500</p>
+      <p class="card-title genre">User Rating: 500</p>
+      <p>Rate Album:</p>
+      <ul data="{{album.id}}">
+        <button type="button" class="btn oneStar">500</button>
+        <button type="button" class="btn twoStar">500</button>
+        <button type="button" class="btn threeStar">500</button>
+        <button type="button" class="btn fourStar">500</button>
+        <button type="button" class="btn fiveStar">500</button>
+      </ul>
+    </div>
+  </div>
+{{/unless}} 
 <div class="albums">
   {{#each albums as |album|}}
   <div class="card">
-    <img src={{album.album_art}} class="card-img-top album-art" alt="Album Art">
+    <img src="/images/{{album.id}}.png" class="card-img-top album-art" alt="Album Art">
     <div class="card-body">
       <h4 class="card-title album">Album: {{album.Album}}</h4>
       <h5 class="card-title artist">Artist: {{album.Artist}}</h5>
