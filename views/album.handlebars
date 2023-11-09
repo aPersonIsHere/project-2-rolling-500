@@ -1,30 +1,33 @@
 <body>
   <div>
-    <canvas id="myChart" height="20px" width="100px"></canvas>
+    <canvas id="myChart" height="200px" width="100px"></canvas>
   </div>
-
+<div class="albums">
   {{#each albums as |album|}}
   <div class="card">
     <img src={{album.album_art}} class="card-img-top album-art" alt="Album Art">
     <div class="card-body">
       <h4 class="card-title album">Album: {{album.Album}}</h4>
-      <h5 class="card-title artist">Artist: {{album.Artist}}Artist</h5>
+      <h5 class="card-title artist">Artist: {{album.Artist}}</h5>
       <h6 class="card-title year">Year: {{album.Year}}</h6>
       <p class="card-title rank">Rank: {{album.Number}}</p>
       <p class="card-title genre">Genre: {{album.Genre}}</p>
       <p class="card-title genre">User Rating: {{album.rating_group}}</p>
       <p>Rate Album:</p>
-      <button type="button" class="btn">1</button>
-      <button type="button" class="btn">2</button>
-      <button type="button" class="btn">3</button>
-      <button type="button" class="btn">4</button>
-      <button type="button" class="btn">5</button>
+      <div class="ratings" data-id={{album.id}}>
+        <button type="button" class="btn">1</button>
+        <button type="button" class="btn">2</button>
+        <button type="button" class="btn">3</button>
+        <button type="button" class="btn">4</button>
+        <button type="button" class="btn">5</button>
+      </div>
     </div>
   </div>
 {{/each}}
-  
+</div>
   
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="/js/visuals.js"></script>
+  <script src="/js/albumRatings.js"></script>
 </body>
