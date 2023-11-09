@@ -1,3 +1,4 @@
+// Connecting to the DB
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
@@ -12,4 +13,5 @@ sequelize = new Sequelize(
   }
 );
 
+// Exports
 module.exports = sequelize;

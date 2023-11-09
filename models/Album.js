@@ -1,10 +1,12 @@
+// Imports
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const Ratings = require('./Ratings');
 
+// Album Model
 class Album extends Model {
 
-  //----testing section----//
+  // Calculates average ratings
   static async calculateAverageRating(albumId) {
     const ratings = await Ratings.findAll({
       where: {
@@ -22,9 +24,9 @@ class Album extends Model {
       await Album.update({ rating_group: null }, { where: { id: albumId } });
     }
   }
-    //----testing section----//
 }
 
+// Album Table
 Album.init(
   {
     id: {
@@ -71,9 +73,9 @@ Album.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    // underscored: true,
     modelName: 'album',
   }
 );
 
+// Exports
 module.exports = Album;

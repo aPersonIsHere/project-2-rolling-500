@@ -1,14 +1,4 @@
-// document.querySelector(".albums").addEventListener("click", function(event) {
-//   // const albumId = event.target.parentElement.dataset.id;
-//   console.log(event.target.children[0]);
-//   if (event.target.matches(".ratings")) {
-//     console.log(event.target.dataset.id);
-//   }
-//   // const rating = event.target.textContent;
-//   // console.log(rating);
-//   // console.log(albumId);
-// });
-
+// Posting rating to DB
 document.querySelector(".albums").addEventListener("click", async function(event) {
   const target = event.target;
 

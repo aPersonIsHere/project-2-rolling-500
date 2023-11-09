@@ -1,7 +1,9 @@
+// Importing all models
 const Album = require('./Album');
 const User = require('./User');
 const Ratings = require('./Ratings');
 
+// Relationships
 User.hasMany(Ratings, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
@@ -19,5 +21,5 @@ Ratings.belongsTo(Album, {
   foreignKey: 'album_id',
 });
 
-
+// Exports
 module.exports = { Album, User, Ratings };

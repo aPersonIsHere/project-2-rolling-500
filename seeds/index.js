@@ -1,3 +1,5 @@
+// Seeding Calls
+
 const sequelize = require('../config/connection');
 const seedAlbum = require('./masterSeed');
 const seedUser = require('./userSeed');

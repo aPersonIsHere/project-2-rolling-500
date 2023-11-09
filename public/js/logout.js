@@ -1,3 +1,4 @@
+// LOG OUT LOGIC
 const logout = async () => {
   const response = await fetch('/api/users/logout', {
     method: 'POST',
@@ -12,4 +13,3 @@ const logout = async () => {
 };
 
 document.querySelector('#logout').addEventListener('click', logout);
-// Make sure its the same in the HTML

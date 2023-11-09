@@ -1,10 +1,9 @@
+// Imports
 const router = require('express').Router();
 const { Album, Ratings, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-// ROUTE: /
-
-//----allows you to view all albums----//
+// Home
 router.get('/', async (req, res) => {
 
   try {
@@ -17,7 +16,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-//----allows you to view all albums----//
+// View all albums
 router.get('/albums', async (req, res) => {
 
     try {
@@ -86,41 +85,42 @@ router.get('/albums/:id', async (req, res) => {
       }
 });
 
+          // FEATURE TO ADD IN THE FUTURE //
 //----allows you to view all albums you've rated----//
-router.get('/profile', withAuth, async (req, res) => {
+// router.get('/profile', withAuth, async (req, res) => {
 
-    try {
-        // Get all albums and JOIN with ratings data***
-        const albumData = await Album.findAll({
-            include: [
-                {
-                  model: Ratings,
-                  where: {
-                    user_id: req.session.user_id
-                  },       
-                include: [
-                    {
-                        model: User,
-                        attributes: ['username'],
-                    },
-                ],
-                },
-              ],
-        });
+//     try {
+//         // Get all albums and JOIN with ratings data***
+//         const albumData = await Album.findAll({
+//             include: [
+//                 {
+//                   model: Ratings,
+//                   where: {
+//                     user_id: req.session.user_id
+//                   },       
+//                 include: [
+//                     {
+//                         model: User,
+//                         attributes: ['username'],
+//                     },
+//                 ],
+//                 },
+//               ],
+//         });
     
-        // Serialize data so the template can read it
-        const albums = albumData.map((album) => album.get({ plain: true }));
+//         // Serialize data so the template can read it
+//         const albums = albumData.map((album) => album.get({ plain: true }));
     
-        // Pass serialized data and session flag into template
-        res.render('profile', { 
-          albums, 
-          logged_in: req.session.logged_in 
-        });
-      } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-      }
-});
+//         // Pass serialized data and session flag into template
+//         res.render('profile', { 
+//           albums, 
+//           logged_in: req.session.logged_in 
+//         });
+//       } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//       }
+// });
 
 //----allows you to view all ratings with albums associated----//
 router.get('/ratings/', async (req, res) => {
@@ -158,6 +158,7 @@ router.get('/ratings/', async (req, res) => {
     }
 });
 
+        // FEATURE TO ADD IN THE FUTURE //
 //----allows you to view a single album with comments----//
 // router.get('/ratings/', async (req, res) => {
 
@@ -196,4 +197,6 @@ router.get('/ratings/', async (req, res) => {
 //     res.render('login');
 //   });
   
+
+  // Exports
   module.exports = router;
