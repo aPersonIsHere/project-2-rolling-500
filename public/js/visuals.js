@@ -1,3 +1,5 @@
+// CHART JS 
+
 const ctx = document.getElementById('myChart');
 
 const albumData = [
@@ -211,16 +213,40 @@ const dateFilter = (startYear, endYear) => {
   return data;
 };
 
-const genreCount = (data, genre) => {
-  let count = 0;
 
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].Genre === genre) {
-      count++
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['1950 - 1960', '1960 - 1970', '1970 - 1980', '1980 - 1990', '1990 - 2000'],
+    datasets: [{
+      label: 'Albums by Decade',
+      data: [dateFilter(1950, 1960), dateFilter(1960, 1970), dateFilter(1970, 1980), dateFilter(1980, 1990), dateFilter(1990, 2000)],
+      borderWidth: 2,
+      backgroundColor: ['Blue', 'Yellow', 'Orange', 'Green', 'Purple', 'Pink', 'Red']
+    },
+  ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
     }
   }
-  return count;
-};
+});
+
+                    // FUTURE FEATURES TO ADD //
+// const genreCount = (data, genre) => {
+//   let count = 0;
+
+//   for (let i = 0; i < data.length; i++) {
+//     if (data[i].Genre === genre) {
+//       count++
+//     }
+//   }
+//   return count;
+// };
 
 // const albumsbyArtist = artistCount(albumData);
 
@@ -245,25 +271,3 @@ const genreCount = (data, genre) => {
 
 //   return artistCount;
 // };
-
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['1950 - 1960', '1960 - 1970', '1970 - 1980', '1980 - 1990', '1990 - 2000'],
-    datasets: [{
-      label: 'Albums by Decade',
-      data: [dateFilter(1950, 1960), dateFilter(1960, 1970), dateFilter(1970, 1980), dateFilter(1980, 1990), dateFilter(1990, 2000)],
-      borderWidth: 2,
-      backgroundColor: ['Blue', 'Yellow', 'Orange', 'Green', 'Purple', 'Pink', 'Red']
-    },
-  ]
-  },
-  options: {
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-});

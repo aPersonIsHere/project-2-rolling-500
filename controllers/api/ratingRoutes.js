@@ -1,7 +1,9 @@
+// Imports
 const router = require('express').Router();
 const { Album, Ratings } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// Create new rating
 router.post('/', withAuth, async (req, res) => { 
     try {
         const newRating = await Ratings.create({
@@ -17,6 +19,7 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+// Delete rating data
 router.delete('/:id', withAuth, async (req, res) => {
     try {
         const ratingData = await Ratings.destroy({
@@ -37,4 +40,5 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 })
 
+// Exports
 module.exports = router;

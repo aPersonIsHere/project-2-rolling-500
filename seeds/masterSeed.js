@@ -1,3 +1,5 @@
+// Album seeds
+
 const { Album } = require('../models');
 
 const albumData = [

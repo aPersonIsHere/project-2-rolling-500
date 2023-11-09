@@ -1,3 +1,5 @@
+// Ratings Seeds
+
 const { Ratings } = require('../models');
 
 const ratingData = [

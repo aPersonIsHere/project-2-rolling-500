@@ -1,7 +1,9 @@
+// Imports
 const router = require('express').Router();
 const { User } = require('../../models');
 
-router.post('/', async (req, res) => { //This is for when the user wants to sign up
+// Signup
+router.post('/', async (req, res) => {
     try {
         const dbUserData = await User.create({
             username: req.body.username,
@@ -20,7 +22,8 @@ router.post('/', async (req, res) => { //This is for when the user wants to sign
     }
 });
 
-router.post('/login', async (req, res) => { //This is for when the user wants to log-in
+// Login
+router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -49,7 +52,8 @@ router.post('/login', async (req, res) => { //This is for when the user wants to
     }
 });
 
-router.post('/logout', (req, res) => { //This is for when the user wants to log-out
+// Logout
+router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();

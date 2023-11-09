@@ -1,12 +1,12 @@
 <section>
 <div>
-    <h1 class="text-center">Unfortunately we do not offer participation awards here... so here is your ranking!</h1>
+    <h1 class="text-center">According to users...</h1>
 </div>
 
-<div>
-    <ul>
+<div class="ratings-wrap">
+    <ul class="rating-list">
     {{#each ratingsMap}}
-        <h2>Rating Group {{@key}}</h2>
+        <h2 class="rating-group">Rating Group {{@key}}</h2>
         <ul>
         {{#each this}}
             <li>{{this}}</li>

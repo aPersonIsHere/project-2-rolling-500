@@ -1,15 +1,18 @@
+// Imports
 const router = require('express').Router();
 const { Album } = require('../../models');
 const withAuth = require('../../utils/auth');
 
- router.post('/', async (req, res) => { //Creates a new album??? 
+
+//Creates a new album??? 
+router.post('/', async (req, res) => {
     try {
         const newAlbum = await Album.create({
             ...req.body,
         });
-          res.status(200).json(newAlbum);
+        res.status(200).json(newAlbum);
     } catch (err) {
-          res.status(400).json(err);
+        res.status(400).json(err);
     }
 });
 

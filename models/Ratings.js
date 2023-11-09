@@ -1,8 +1,11 @@
+// Imports
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection')
 
+// Ratings model
 class Ratings extends Model {}
 
+// Ratings Table
 Ratings.init(
   {
     id: {
@@ -45,4 +48,5 @@ Ratings.init(
   }
 );
 
+// Exports
 module.exports = Ratings;
