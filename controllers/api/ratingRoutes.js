@@ -2,11 +2,11 @@ const router = require('express').Router();
 const { Album, Ratings } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => { 
+router.post('/', withAuth, async (req, res) => { 
     try {
         const newRating = await Ratings.create({
             ...req.body,
-            //user_id: req.session.user_id,
+            user_id: req.session.user_id,
         });
 
         await Album.calculateAverageRating(req.body.album_id);
