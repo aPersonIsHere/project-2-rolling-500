@@ -91,6 +91,10 @@ body {
     box-shadow: 4px 4px gray;
   }
 
+  #logout {
+    cursor: pointer;
+  }
+
   /* RATINGS PAGE */
   .ratings-wrap {
     text-align: center;
