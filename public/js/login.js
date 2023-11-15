@@ -47,12 +47,16 @@ const signupFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+const loginEl = document.querySelector('.login-form');
+  // This will get rid of a console error
+if (loginEl) {
+  loginEl.addEventListener('submit', loginFormHandler);
+}
 
-document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);
-
+const signUpEl = document.querySelector('.signup-form');
+if (signUpEl) {
+  signUpEl.addEventListener('submit', signupFormHandler);
+}
+  
   // Make sure query selectors are the same
+

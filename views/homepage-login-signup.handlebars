@@ -13,7 +13,8 @@
             </p>
           </div>
       </section>
-      
+    
+    {{#unless logged_in}}
     <div class="signUp">
       <h3>Sign Up: </h3>
         <form class="signup-form">
@@ -31,6 +32,7 @@
           <button class="credential-btn" type="submit">Submit</button>
         </form>
     </div>
+    {{/unless}}
 
     </main>
 
