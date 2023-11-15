@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
 
   try {
       res.render('homepage-login-signup', { 
-        logged_in: req.session.logged_in 
+        logged_in: req.session.logged_in
       });
     } catch (err) {
       console.log(err);
@@ -41,7 +41,7 @@ router.get('/albums', async (req, res) => {
         // Pass serialized data and session flag into template
         res.render('album', { 
           albums, 
-          logged_in: req.session.logged_in 
+          logged_in: req.session.logged_in
         });
       } catch (err) {
         console.log(egitrr);
