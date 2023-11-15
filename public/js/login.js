@@ -16,12 +16,16 @@ const loginFormHandler = async (event) => {
 
     //console.log(response);
 
-    if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/albums');
-    } else {
-      alert(response.statusText);
-    }
+    //Put a .25 second delay when logging in
+    setTimeout( () => {
+      if (response.ok) {
+        // If successful, redirect the browser to the profile page
+        document.location.replace('/albums');
+      } else {
+        alert(response.statusText);
+      }
+    }, 250);
+
   }
 };
 
@@ -39,11 +43,16 @@ const signupFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (response.ok) {
-      document.location.replace('/albums');
-    } else {
-      alert(response.statusText);
-    }
+    //Put a .25 second delay when signing in in
+    setTimeout( () => {
+      if (response.ok) {
+        // If successful, redirect the browser to the profile page
+        document.location.replace('/albums');
+      } else {
+        alert(response.statusText);
+      }
+    }, 250);
+
   }
 };
 
