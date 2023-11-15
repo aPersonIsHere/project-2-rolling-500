@@ -24,7 +24,7 @@ const loginFormHandler = async (event) => {
       } else {
         alert(response.statusText);
       }
-    }, 1000);
+    }, 250);
 
   }
 };
